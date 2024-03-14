@@ -10,9 +10,22 @@ private:
 protected:
 public:
     virtual void smt() = 0; //pure virtual function
+    //params ctor
     IlluminCat(const string& name, int id){
         Name = name;
         Id = id;
+    }
+    //destructor
+    virtual ~IlluminCat() {
+        cout << Id + "destructor invoked";
+
+    }
+    // IlluminCat(){}//  empty default constructor
+    // IlluminCat() {Name = "lala";}// default ctor
+    //copy ctor
+    IlluminCat(const IlluminCat& original) {
+        Name = original.Name;
+        Id = original.Id;
     }
 };
 
@@ -35,24 +48,7 @@ public:
 class FriendClass {
 public:
     void PrintResults(EquilateralTriangle et){
-        cout << "circumference = " << et.circumference << endl;
-        cout << "area = " << et.area << endl;
+        std::cout << "circumference = " << et.circumference << std::endl;
+        std::cout << "area = " << et.area << std::endl;
     }
-};
-
-//Functions.cpp
-bool isPrimeNumber(int num);
-
-int recursive_sum(int m, int n);
-
-template<typename V>
-void Swap(V& a, V& b);
-
-template <class T>
-class Calculator{
-public:
-    T add(T a, T b);
-    T subtract(T a, T b);
-    T multiply(T a, T b);
-    T divide(T a, T b);
 };

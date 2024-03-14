@@ -1,6 +1,8 @@
 #include <iostream>
 #include "Labyrinth.h"
 
+using std::string;
+
 class Cats:public IlluminCat{
 private:
     int Gender;
@@ -15,8 +17,7 @@ public:
     }
     void setGender(int gender){
         Gender = gender;
-}
-
+    }
 };
 class Persons:public IlluminCat{
 private:
@@ -26,7 +27,7 @@ public:
     void smt(){
         std::cout<<"Human";
     }
-    Persons(const string& name, int id, int age) : IlluminCat(name, id), Age(age){}
+    Persons(const string& name, int id, int age) : IlluminCat(name, id), Age(age){};
     int getAge(){
         return Age;
     }

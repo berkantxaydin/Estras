@@ -11,15 +11,11 @@ using std::endl;
 
 int main(void){
     //SubClasses
-    IlluminCat* s1 = new Cats("Berk", 1, 1);
-    IlluminCat* s2 = new Persons("Berk", 1, 1);
+    IlluminCat* s1 = new Cats("Berkant", 01, 0);
+    IlluminCat* s2 = new Persons("Miss", 02, 1);
 
     s1->smt();
     s2->smt();
-    
-    //Generic Class
-    Calculator<int> intCalculator;
-    cout << intCalculator.add(12,32);
     
     //Friend Functions
     EquilateralTriangle et;

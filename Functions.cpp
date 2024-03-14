@@ -97,5 +97,5 @@ bool equal<float>(float a, float b){
 template<>
 bool equal<double>(double a, double b){
     cout << "equal<double>\n";
-    return fabs(a - b) < 0.0000001;
+    return abs(a - b) < 0.0000001;
 }
